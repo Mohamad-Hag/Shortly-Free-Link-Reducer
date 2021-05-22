@@ -1,0 +1,56 @@
+.textbox
+{
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    position: relative;
+}
+.textbox-in-error-block
+{
+    color: var(--error-cr);
+    font-size: .85em;
+    font-style: italic;
+    position: absolute;
+    top: 108%;
+}
+.textbox-in
+{       
+    padding: .5em 1.5em;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    box-shadow: var(--textbox-bs);
+    transition: var(--primary-tn);    
+    box-sizing: border-box;
+    width: 100%;
+    background: var(--secondary-txt-cr);
+}
+.textbox-in-error
+{
+    border: 2px solid var(--error-cr) !important;
+}
+.textbox-in-error::placeholder
+{
+    color: var(--error-cr) !important;
+}
+.textbox-in:focus
+{
+    --textbox-bs: 0 10px 22px #00000015;
+}
+.textbox-in::placeholder
+{
+    color: var(--contents-bg);
+}
+.small-textbox
+{
+    font-size: var(--medium-fs) !important;
+}
+.large-textbox
+{
+    font-size: var(--xlarge-fs) !important;
+}
+.medium-textbox
+{
+    font-size: var(--larger-fs) !important;
+}

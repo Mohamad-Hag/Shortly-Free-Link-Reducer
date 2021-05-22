@@ -1,0 +1,23 @@
+.link
+{
+    --link-hover-cr: var(--primary-cr);
+    --link-cr: var(--primary-cr);
+    color: var(--link-cr);
+    transition: var(--primary-tn);
+}
+.link:hover
+{
+    color: var(--link-hover-cr);
+}
+.small-link
+{
+    font-size: var(--medium-fs) !important;
+}
+.large-link
+{
+    font-size: var(--xlarge-fs) !important;
+}
+.medium-link        
+{
+    font-size: var(--larger-fs) !important;
+}

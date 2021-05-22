@@ -1,0 +1,130 @@
+#header
+{
+    width: 100%;
+    background: var(--secondary-txt-cr);
+    display: flex;
+    align-items: center;
+    padding: 40px var(--sides-pg);
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+#header-left
+{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+#header-left > a
+{
+    display: flex;
+    align-items: center;
+}
+#header-left ul
+{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+#header-right
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#menu-btn
+{
+    cursor: pointer;
+    display: none;
+}
+#Path_1, #Path_2, #Path_3
+{
+    transition: var(--primary-tn);
+}
+.menu-path-1
+{
+    d: path("M1608.327,151.719h30.566");
+    transform: translate(-1015.785px, -1230.347px) rotate(45deg);
+}
+.menu-path-2
+{
+    opacity: 0;
+}
+.menu-path-3
+{    
+    d: path("M1608.327,151.719h30.566");
+    transform: translate(-1230.347px, 1065.785px) rotate(-45deg);
+}
+#mobile-menu
+{
+    position: absolute;
+    top: 100px;
+    padding: 20px;
+    background: var(--secondary-cr);
+    right: 0;
+    left: 0;
+    margin: 0 var(--sides-pg);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: var(--main-bs);
+    transition: var(--primary-tn);
+    transform-origin: top right;
+    transform: translate(10px, -10px) scale(0);
+    opacity: 0;
+    visibility: hidden;
+}
+.mobile-menu-open
+{
+    transform: translate(0, 0) scale(1) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#mobile-menu ul
+{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 0 solid var(--links-cr);
+    border-bottom-width: 1px;
+}
+#mobile-menu ul .panel-link
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+#mobile-menu-bottom
+{
+    display: flex;    
+    flex-direction: column;
+    gap: 20px;
+}
+#mobile-menu-bottom .panel-link
+{
+    align-self: center;
+}
+@media screen and (max-width: 950px) 
+{
+    #header-right > *:not(svg), #header-left ul
+    {
+        display: none;
+    }
+    #menu-btn
+    {
+        display: block;
+    }
+}
+@media screen and (min-width: 950px) 
+{
+    .mobile-menu-open
+    {
+        transition: 0 !important;
+        transform: translate(10px, -10px) scale(0) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}

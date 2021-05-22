@@ -1,0 +1,24 @@
+.panel-link
+{
+    font-weight: var(--bold-fw); 
+    color: var(--links-cr);
+    transition: var(--primary-tn);
+    --panel-link-hover-cr: var(--special-parts-bg);
+    font-size: var(--medium-fs);
+}
+.panel-link:hover
+{
+    color: var(--panel-link-hover-cr);
+}
+.small-link
+{
+    font-size: var(--medium-fs) !important;
+}
+.large-link
+{
+    font-size: var(--xlarge-fs) !important;
+}
+.medium-link        
+{
+    font-size: var(--larger-fs) !important;
+}

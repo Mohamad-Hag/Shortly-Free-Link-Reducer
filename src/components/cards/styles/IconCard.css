@@ -1,0 +1,44 @@
+.icon-card
+{
+    box-shadow: var(--main-bs);
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 350px;
+    background-color: var(--secondary-txt-cr);
+    position: relative;
+    margin-top: 50px;
+}
+.icon-card .icon-label
+{
+    position: absolute;
+    top: -45px;
+}
+.icon-card dt
+{
+    color: var(--ill-cr);
+    font-weight: var(--bold-fw);
+    font-size: var(--larger-fs);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.icon-card dd
+{
+    color: var(--contents-bg);
+    font-size: var(--smaller-fs);
+}
+@media screen and (max-width: 500px) 
+{
+    .icon-card
+    {
+        width: 100%;
+    }  
+}
+@media screen and (max-width: 990px) 
+{
+    .icon-card .icon-label
+    {
+        left: 50%;
+        transform: translateX(-50%); 
+    }      
+}

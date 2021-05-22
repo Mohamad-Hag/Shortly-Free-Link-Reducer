@@ -1,0 +1,67 @@
+.button
+{   
+    font-weight: var(--bold-fw);
+    padding: .5em 1.5em;    
+    border: none;
+    transition: var(--primary-tn);
+    color: var(--secondary-txt-cr);    
+    background-color: var(--primary-cr);
+    border-radius: 5px;
+    font-size: var(--larger-fs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.button:active
+{
+    transform: scale(0.94);
+}
+.normal-button
+{
+    border-radius: 5px;
+}
+.button:hover
+{
+    opacity: var(--hover-opy);
+}
+.rounded-button
+{
+    border-radius: 200px !important;
+}
+.small-button
+{
+    font-size: var(--medium-fs) !important;
+}
+.large-button
+{
+    font-size: var(--xlarge-fs) !important;
+}
+.medium-button
+{
+    font-size: var(--larger-fs) !important;
+}
+.loading-button
+{
+    padding: .5em !important;
+}
+.button .loader
+{
+    height: 2em;
+    width: 2em;
+    box-sizing: border-box;
+    border: 3px solid var(--secondary-txt-cr);
+    border-bottom-color: transparent !important;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: button-loader-animation .5s infinite linear;    
+}
+.button:disabled
+{
+    opacity: var(--disabled-opy);
+}
+@keyframes button-loader-animation {
+    to
+    {
+        transform: rotate(360deg);
+    }
+}

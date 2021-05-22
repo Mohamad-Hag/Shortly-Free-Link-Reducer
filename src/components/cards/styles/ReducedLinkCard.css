@@ -1,0 +1,70 @@
+.reduced-link-card
+{
+    background-color: var(--secondary-txt-cr);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: var(--main-bs);
+    gap: 10px;
+}
+.reduced-link-card-original
+{
+    white-space: nowrap; 
+    text-overflow: ellipsis;   
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.reduced-link-card-right
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.reduced-link-card-right .link
+{
+    box-sizing: border-box;   
+}
+.reduced-link-card-right .button
+{
+    
+}
+@media screen and (max-width: 700px) 
+{
+    .reduced-link-card
+    {
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-start;
+        gap: 0;
+    }  
+    .reduced-link-card-original
+    {
+        border: 0 solid var(--scrollbar-bg);        
+        border-bottom-width: 1px;
+        padding: 20px;
+        width: 100%;    
+    }
+    .reduced-link-card-right
+    {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .reduced-link-card-right .link
+    {
+        width: 100%;   
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;     
+    }
+    .reduced-link-card-right .button
+    {
+        width: 100%;
+    }
+}

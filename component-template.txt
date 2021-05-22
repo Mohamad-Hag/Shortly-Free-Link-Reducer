@@ -1,0 +1,34 @@
+import React, { Component } from "react";
+import "./styles/______.css";
+
+class ______ extends Component {
+  constructor(props) {
+    super(props);
+
+    // Refs
+    this.rootRef = React.createRef();
+
+    // State Object
+    this.state = {};
+
+    // Binding Methods
+  }
+  componentDidMount() {}
+  componentDidUpdate() {}
+  UNSAFE_componentWillReceiveProps() {}
+  render() {
+    return (
+      <div
+        className="______"
+        id={this.props.id}
+        ref={this.rootRef}
+        onClick={this.props.onClick}
+        onMouseDown={this.props.onMouseDown}
+        onMouseUp={this.props.onMouseUp}
+        onMouseOver={this.props.onMouseOver}
+      ></div>
+    );
+  }
+}
+
+export default ______;
