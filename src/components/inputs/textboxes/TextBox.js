@@ -55,6 +55,8 @@ class TextBox extends Component {
         onMouseOver={this.props.onMouseOver}
         onInput={this.props.onInput}
         onChange={this.props.onChange}
+        onKeyDown={this.props.onKeyDown}
+        onKeyUp={this.props.onKeyUp}
         style={this.props.style}
       >
         <input

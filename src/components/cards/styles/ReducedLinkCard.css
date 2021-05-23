@@ -9,6 +9,17 @@
     border-radius: 5px;
     box-shadow: var(--main-bs);
     gap: 10px;
+    animation: reduced-link-card-animation var(--primary-tn) forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+@keyframes reduced-link-card-animation
+{
+    to    
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .reduced-link-card-original
 {

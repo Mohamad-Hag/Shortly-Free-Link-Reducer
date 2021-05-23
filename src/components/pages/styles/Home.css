@@ -27,14 +27,22 @@
 }
 #intro-welcoming
 {
-    
+    animation: intro-welcoming-animation .8s forwards;
+    opacity: 0;
 }
-#intro-welcoming dt
+@keyframes intro-welcoming-animation 
+{
+    to
+    {
+        opacity: 1;
+    }
+}
+#intro-welcoming h1
 {
     font-size: 3em;
     font-weight: var(--bold-fw);
 }
-#intro-welcoming dd
+#intro-welcoming p
 {
     font-size: var(--large-fs);
     margin-bottom: 40px;
@@ -215,11 +223,11 @@
         flex-direction: column;
         align-items: center;
     }
-    #intro-welcoming dt
+    #intro-welcoming h1
     {
         font-size: 2em;    
     }
-    #intro-welcoming dd
+    #intro-welcoming p
     {
         margin-bottom: 20px;
         font-size: var(--medium-fs);

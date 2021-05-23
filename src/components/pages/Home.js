@@ -34,6 +34,10 @@ class Home extends Component {
     // Binding Methods
     this.shortenClicked = this.shortenClicked.bind(this);
     this.shortenTextChanged = this.shortenTextChanged.bind(this);
+    this.shortenKeyUpped = this.shortenKeyUpped.bind(this);
+  }
+  shortenKeyUpped(e) {
+    if (e.keyCode === 13) this.shortenClicked();
   }
   shortenTextChanged(e) {
     let target = e.target;
@@ -41,8 +45,9 @@ class Home extends Component {
     this.setState({ shortenText: value });
     this.setState({ shortenError: undefined });
   }
-  shortenClicked(e) {
-    let target = e.currentTarget;
+  shortenClicked() {
+    if (this.state.shortenLoading === true) return;
+    let target = document.querySelector("#shorten-it-btn");
     let linkToShorten = document.querySelector("#shorten-link-inp").value;
     let linkCards = document.querySelector("#link-cards");
 
@@ -63,16 +68,16 @@ class Home extends Component {
 
         linkCards.style.display = "flex";
         this.setState((prev) => ({
-          linkCards: [...prev.linkCards,
+          linkCards: [
             {
               original: urlBefore,
               short: urlAfter,
             },
+            ...prev.linkCards
           ],
         }));
       })
       .catch((err) => {
-        console.log(err);
         this.setState({ shortenLoading: false });
         this.setState({ shortenError: "Please enter a valid URL" });
         target.removeAttribute("disabled");
@@ -103,11 +108,11 @@ class Home extends Component {
           <div id="intro">
             <div id="intro-inner">
               <div id="intro-welcoming">
-                <dt>More than just shorter links</dt>
-                <dd>
+                <h1>More than just shorter links</h1>
+                <p>
                   Build your brand’s recognition and get detailed insights on
                   how your links are performing.
-                </dd>
+                </p>
                 <Button text="Get Started" size="medium" type="rounded" />
               </div>
               <img src={introImg} />
@@ -123,8 +128,10 @@ class Home extends Component {
               size="medium"
               error={this.state.shortenError}
               onInput={this.shortenTextChanged}
+              onKeyUp={this.shortenKeyUpped}
             />
             <Button
+              id="shorten-it-btn"
               text="Shorten It!"
               onClick={this.shortenClicked}
               loading={this.state.shortenLoading}
